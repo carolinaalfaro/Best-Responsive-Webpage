@@ -44,16 +44,9 @@ body {
 	max-height: 75%;
 	max-width: 75%;
 }
-.box-red {
-	height: 60%;
-	width: 100;
-	background-color: #0D11A8;
-}
-.box-yellow {
-	height: 60%;
-	width: 100;
-	background-color: #F50F0F;
-}
+
+/* This media query consists of the body making the class wide-col and narrow-col block when the screen is at 700px.
+ However, the classes inside of the narrow-col will be flexing meaning that the red and yellow box will be side by side.*/
 @media screen and (max-width: 700px) {
 	body {
 		width: 100%;
@@ -75,6 +68,10 @@ body {
 		height: 100%;
 		width: 50%;
 	}
+/* The following media query transpires when the screen is at 500px, which is smaller than the first media query screen size.
+When the screen is at 500px then the narrow-col will tell its children to block, so that the red and yellow box are stacked upon
+each other. Also the sizes of the class "box" are different were the width is 100% and height is 50%. This also creates the scrolling feature
+as the height is more than 100%.*/
 }
 @media screen and (max-width: 500px) {
 
